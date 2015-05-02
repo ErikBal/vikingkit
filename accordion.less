@@ -1,4 +1,4 @@
-.vk-accordion(@bgColorTitle, @bgColorTitleActive, @bgColorTitleOpacity, 
+.vk-accordion(@h3ColorTitle, @bgColorTitle, @bgColorTitleActive, @bgColorTitleOpacity, 
 			@bgColorTitleHoverOpacity, @bgColorTitleActiveOpacity, @bgColorTitleActiveHoverOpacity, 
 			@borderColorTitle, @iconColor, @iconColorHover){
 	.uk-accordion-title{
@@ -13,6 +13,7 @@
 		text-align: left;
 		font-weight: bold;
 		font-family: 'FontAwesome';
+		color: @h3ColorTitle;
 		&:hover{
 			.enc-background-rgb(@bgColorTitle, @bgColorTitleHoverOpacity);
 			.enc-create-border(1px, solid, @borderColorTitle, 13px);
