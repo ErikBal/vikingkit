@@ -8,7 +8,8 @@
 	}
 	.uk-slidenav{
 		.enc-media-auto-width(font-size, 19px, 2);
-		color: darken(@colorNavButtons, 30%);
+		.enc-color-rgb(@colorNavButtons, @colorNavButtonsOpacity);
+		display: block;
 		&:hover{
 			color: @colorHoverActive;
 		}
