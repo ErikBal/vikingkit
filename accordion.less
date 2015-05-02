@@ -1,15 +1,15 @@
 .vk-accordion(@bgColorTitle, @bgColorTitleActive, @bgColorTitleOpacity, 
-			@bgColorTitleHoverOpacity, @borderColorTitle, @iconColor, 
-			@iconColorHover){
+			@bgColorTitleHoverOpacity, @bgColorTitleActiveOpacity, @bgColorTitleActiveHoverOpacity, 
+			@borderColorTitle, @iconColor, @iconColorHover){
 	.uk-accordion-title{
 		.enc-user-select-none;
 		.enc-transition(0.5s, ease);
-		.enc-background-rgb(@bgColorTitle, 0.7);
+		.enc-background-rgb(@bgColorTitle, @bgColorTitleOpacity);
 		.enc-media-auto-width(font-size, 12px, 0.2);
 		.enc-media-auto-width(padding-left, 7px, 0.5);
 		.enc-media-auto-width(margin-top, 7px, 0.4);
 		.enc-media-auto-width(margin-bottom, 7px, 0.4);
-		.enc-create-border(1px, solid, @borderColorTitle, @bgColorTitleOpacity);
+		.enc-create-border(1px, solid, @borderColorTitle, 1);
 		text-align: left;
 		font-weight: bold;
 		font-family: 'FontAwesome';
@@ -33,12 +33,12 @@
 		}
 	}
 	.uk-active{
-		.enc-background-rgb(@bgColorTitleActive, 0.7);
+		.enc-background-rgb(@bgColorTitleActive, @bgColorTitleActiveOpacity);
 		.enc-create-border(1px, solid, @borderColorTitle, 13px);
 		.enc-transition(0.5s, ease);
 		color: @iconColorHover;
 		&:hover{
-			.enc-background-rgb(@bgColorTitleActive, 1);
+			.enc-background-rgb(@bgColorTitleActive, @bgColorTitleActiveHoverOpacity);
 		}
 		span{
 			color: @iconColorHover;
