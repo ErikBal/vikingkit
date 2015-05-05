@@ -1,4 +1,8 @@
-.vk-slidenav-position( @colorNavButtons, @colorHoverActive, @colorNavButtonsOpacity){
+.vk-slidenav-position(@colorNavButtons: #000000, 
+@colorHoverActive: #FFFFFF, 
+@colorNavButtonsOpacity: 1,
+@slidNavNextIcon: "\f138",
+@slidNavPerviousIcon: "\f137"){
 	.uk-slideshow{
 		li{
 			background-color: transparent;
@@ -19,13 +23,13 @@
 	.uk-slidenav-next{
 		.enc-media-auto-width(right, 10px, 1);
 		&:before{
-			content: "\f138";
+			content: @slidNavNextIcon;
 		}
 	}
 	.uk-slidenav-previous{
 		.enc-media-auto-width(left, 10px, 1);
 		&:before{
-			content: "\f137";
+			content: @slidNavPerviousIcon;
 		}
 	}
 	.uk-dotnav{
