@@ -1,6 +1,11 @@
 .vk-accordion(@h3FontFamily: 'FontAwesome', 
 @h3FontSize: 20px,
-@h3FontSizeRatio: 1,  
+@h3FontSizeRatio: 1, 
+@h3TextShadowColor: #000000,
+@h3TextShadowOpacity: 0.5,
+@h3TextShadowAngle: 2px,
+@h3TextShadowDistance: 2px,
+@h3TextShadowBlur: 2px,
 @h3ColorTitle: #FFFFFF, 
 @bgColorTitle: #000000,
 @bgColorTitleActive: #FFFFFF,
@@ -20,6 +25,7 @@
 		.enc-media-auto-width(margin-top, 7px, 0.4);
 		.enc-media-auto-width(margin-bottom, 7px, 0.4);
 		.enc-create-border(1px, solid, @borderColorTitle, 1);
+		.enc-text-shadow(@h3TextShadowColor, @h3TextShadowOpacity, @h3TextShadowAngle,  @h3TextShadowDistance, @h3TextShadowBlur;
 		text-align: left;
 		font-weight: bold;
 		font-family: @h3FontFamily;
