@@ -1,11 +1,11 @@
-.vk-accordion(@h3ColorTitle, @bgColorTitle, @bgColorTitleActive, @bgColorTitleOpacity, 
+.vk-accordion(@h3FontSize, @h3FontSizeRatio, @h3ColorTitle, @bgColorTitle, @bgColorTitleActive, @bgColorTitleOpacity, 
 			@bgColorTitleHoverOpacity, @bgColorTitleActiveOpacity, @bgColorTitleActiveHoverOpacity, 
 			@borderColorTitle, @iconColor, @iconColorHover){
 	.uk-accordion-title{
 		.enc-user-select-none;
 		.enc-transition(0.5s, ease);
 		.enc-background-rgb(@bgColorTitle, @bgColorTitleOpacity);
-		.enc-media-auto-width(font-size, 12px, 0.2);
+		.enc-media-auto-width(font-size, @h3FontSize, @h3FontSizeRatio);
 		.enc-media-auto-width(padding-left, 7px, 0.5);
 		.enc-media-auto-width(margin-top, 7px, 0.4);
 		.enc-media-auto-width(margin-bottom, 7px, 0.4);
