@@ -14,8 +14,8 @@
 @accordionTitleBgColorActiveOpacity: 1,
 @accordionTitleBgColorActiveHoverOpacity: 1,
 @accordionTitleBorderWidth: 1,
-@accordionTitleBorderColorTitle: #FFFFFF,
-@accordionTitleBorderRadius: 1; 
+@accordionTitleBorderColor: #FFFFFF,
+@accordionTitleBorderRadius: 1,
 @accordionTitleIconColor: #000000,
 @accordionTitleIconColorHover: #FFFFFF){
 	.uk-accordion-title{
@@ -26,7 +26,7 @@
 		.enc-media-auto-width(padding-left, 7px, 0.5);
 		.enc-media-auto-width(margin-top, 7px, 0.4);
 		.enc-media-auto-width(margin-bottom, 7px, 0.4);
-		.enc-create-border(@accordionTitleBorderWidth, solid, @accordionTitleBorderColorTitle, @accordionTitleBorderRadius);
+		.enc-create-border(@accordionTitleBorderWidth, solid, @accordionTitleBorderColor, @accordionTitleBorderRadius);
 		.enc-text-shadow(@accordionTitleTextShadowColor, @accordionTitleTextShadowOpacity, @accordionTitleTextShadowAngle,  @accordionTitleTextShadowDistance, @h3TextShadowBlur);
 		text-align: left;
 		font-weight: bold;
