@@ -6,7 +6,7 @@
 @accordionTitleTextShadowAngle: 2px,
 @accordionTitleTextShadowDistance: 2px,
 @accordionTitleTextShadowBlur: 2px,
-@accordionTitleColorTitle: #FFFFFF, 
+@accordionTitleColor: #FFFFFF, 
 @accordionTitleBgColor: #000000,
 @accordionTitleBgColorActive: #FFFFFF,
 @accordionTitleBgColorOpacity: 1,
@@ -27,11 +27,11 @@
 		.enc-media-auto-width(margin-top, 7px, 0.4);
 		.enc-media-auto-width(margin-bottom, 7px, 0.4);
 		.enc-create-border(@accordionTitleBorderWidth, solid, @accordionTitleBorderColor, @accordionTitleBorderRadius);
-		.enc-text-shadow(@accordionTitleTextShadowColor, @accordionTitleTextShadowOpacity, @accordionTitleTextShadowAngle,  @accordionTitleTextShadowDistance, @h3TextShadowBlur);
+		.enc-text-shadow(@accordionTitleTextShadowColor, @accordionTitleTextShadowOpacity, @accordionTitleTextShadowAngle,  @accordionTitleTextShadowDistance, @accordionTitleTextShadowBlur);
 		text-align: left;
 		font-weight: bold;
 		font-family: @accordionTitleFontFamily;
-		color: @accordionTitleColorTitle;
+		color: @accordionTitleColor;
 		&:hover{
 			.enc-background-rgb(@accordionTitleBgColorTitle, @accordionTitleBgColorTitleHoverOpacity);
 			.enc-create-border(1px, solid, @accordionTitleBorderColorTitle, 13px);
