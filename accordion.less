@@ -1,48 +1,50 @@
-.vk-accordion(@h3FontFamily: 'FontAwesome', 
-@h3FontSize: 20px,
-@h3FontSizeRatio: 1, 
-@h3TextShadowColor: #000000,
-@h3TextShadowOpacity: 0.5,
-@h3TextShadowAngle: 2px,
-@h3TextShadowDistance: 2px,
-@h3TextShadowBlur: 2px,
-@h3ColorTitle: #FFFFFF, 
-@bgColorTitle: #000000,
-@bgColorTitleActive: #FFFFFF,
-@bgColorTitleOpacity: 1,
-@bgColorTitleHoverOpacity: 1,
-@bgColorTitleActiveOpacity: 1,
-@bgColorTitleActiveHoverOpacity: 1,
-@borderColorTitle: #FFFFFF, 
-@iconColor: #000000,
-@iconColorHover: #FFFFFF){
+.vk-accordion(@accordionTitleFontFamily: 'FontAwesome', 
+@accordionTitleFontSize: 20px,
+@accordionTitleFontSizeRatio: 1, 
+@accordionTitleTextShadowColor: #000000,
+@accordionTitleTextShadowOpacity: 0.5,
+@accordionTitleTextShadowAngle: 2px,
+@accordionTitleTextShadowDistance: 2px,
+@accordionTitleTextShadowBlur: 2px,
+@accordionTitleColorTitle: #FFFFFF, 
+@accordionTitleBgColor: #000000,
+@accordionTitleBgColorActive: #FFFFFF,
+@accordionTitleBgColorOpacity: 1,
+@accordionTitleBgColorHoverOpacity: 1,
+@accordionTitleBgColorActiveOpacity: 1,
+@accordionTitleBgColorActiveHoverOpacity: 1,
+@accordionTitleBorderWidth: 1,
+@accordionTitleBorderColorTitle: #FFFFFF,
+@accordionTitleBorderRadius: 1; 
+@accordionTitleIconColor: #000000,
+@accordionTitleIconColorHover: #FFFFFF){
 	.uk-accordion-title{
 		.enc-user-select-none;
 		.enc-transition(0.5s, ease);
-		.enc-background-rgb(@bgColorTitle, @bgColorTitleOpacity);
-		.enc-media-auto-width(font-size, @h3FontSize, @h3FontSizeRatio);
+		.enc-background-rgb(@accordionTitleBgColor, @accordionTitleBgColorOpacity);
+		.enc-media-auto-width(font-size, @accordionTitleFontSize, @accordionTitleFontSizeRatio);
 		.enc-media-auto-width(padding-left, 7px, 0.5);
 		.enc-media-auto-width(margin-top, 7px, 0.4);
 		.enc-media-auto-width(margin-bottom, 7px, 0.4);
-		.enc-create-border(1px, solid, @borderColorTitle, 1);
-		.enc-text-shadow(@h3TextShadowColor, @h3TextShadowOpacity, @h3TextShadowAngle,  @h3TextShadowDistance, @h3TextShadowBlur);
+		.enc-create-border(@accordionTitleBorderWidth, solid, @accordionTitleBorderColorTitle, @accordionTitleBorderRadius);
+		.enc-text-shadow(@accordionTitleTextShadowColor, @accordionTitleTextShadowOpacity, @accordionTitleTextShadowAngle,  @accordionTitleTextShadowDistance, @h3TextShadowBlur);
 		text-align: left;
 		font-weight: bold;
-		font-family: @h3FontFamily;
-		color: @h3ColorTitle;
+		font-family: @accordionTitleFontFamily;
+		color: @accordionTitleColorTitle;
 		&:hover{
-			.enc-background-rgb(@bgColorTitle, @bgColorTitleHoverOpacity);
-			.enc-create-border(1px, solid, @borderColorTitle, 13px);
-			color: @iconColorHover;
+			.enc-background-rgb(@accordionTitleBgColorTitle, @accordionTitleBgColorTitleHoverOpacity);
+			.enc-create-border(1px, solid, @accordionTitleBorderColorTitle, 13px);
+			color: @accordionTitleIconColorHover;
 		}
 		&:hover span{
-			color: @iconColorHover;
+			color: @accordionTitleIconColorHover;
 		}
 		span{
 			.enc-transition(0.5s, ease);
-			color: @iconColor;
+			color: @accordionTitleIconColor;
 			&:hover{
-				color: @iconColorHover;
+				color: @accordionTitleIconColorHover;
 			}
 			&:before{
 				content: "\f0fe";
@@ -50,15 +52,15 @@
 		}
 	}
 	.uk-active{
-		.enc-background-rgb(@bgColorTitleActive, @bgColorTitleActiveOpacity);
+		.enc-background-rgb(@accordionTitleBgColorTitleActive, @accordionTitleBgColorTitleActiveOpacity);
 		.enc-create-border(1px, solid, @borderColorTitle, 13px);
 		.enc-transition(0.5s, ease);
 		color: @iconColorHover;
 		&:hover{
-			.enc-background-rgb(@bgColorTitleActive, @bgColorTitleActiveHoverOpacity);
+			.enc-background-rgb(@accordionTitleBgColorTitleActive, @accordionTitleBgColorTitleActiveHoverOpacity);
 		}
 		span{
-			color: @iconColorHover;
+			color: @accordionTitleIconColorHover;
 			&:before{
 				content: "\f146";
 			}
