@@ -33,8 +33,8 @@
 		font-family: @accordionTitleFontFamily;
 		color: @accordionTitleColor;
 		&:hover{
-			.enc-background-rgb(@accordionTitleBgColorTitle, @accordionTitleBgColorTitleHoverOpacity);
-			.enc-create-border(1px, solid, @accordionTitleBorderColorTitle, 13px);
+			.enc-background-rgb(@accordionTitleBgColor, @accordionTitleBgColorHoverOpacity);
+			.enc-create-border(1px, solid, @accordionTitleBorderColor, 13px);
 			color: @accordionTitleIconColorHover;
 		}
 		&:hover span{
@@ -52,12 +52,12 @@
 		}
 	}
 	.uk-active{
-		.enc-background-rgb(@accordionTitleBgColorTitleActive, @accordionTitleBgColorTitleActiveOpacity);
+		.enc-background-rgb(@accordionTitleBgColorActive, @accordionTitleBgColorActiveOpacity);
 		.enc-create-border(1px, solid, @borderColorTitle, 13px);
 		.enc-transition(0.5s, ease);
 		color: @iconColorHover;
 		&:hover{
-			.enc-background-rgb(@accordionTitleBgColorTitleActive, @accordionTitleBgColorTitleActiveHoverOpacity);
+			.enc-background-rgb(@accordionTitleBgColorActive, @accordionTitleBgColorActiveHoverOpacity);
 		}
 		span{
 			color: @accordionTitleIconColorHover;
