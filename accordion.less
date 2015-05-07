@@ -1,4 +1,9 @@
-.vk-accordion(@accordionTitleFontFamily: 'FontAwesome', 
+.vk-accordion(@accordionTitleFontFamily: 'Times New Roman',
+@accordionTitleIconFontFamily: 'FontAwesome',
+@accordionTitleIcon: "\f0fe",
+@accordionTitleIconActive: "\f146",
+@accordionTitleIconColor: #000000,
+@accordionTitleIconColorHover: #FFFFFF,
 @accordionTitleFontSize: 20px,
 @accordionTitleFontSizeRatio: 1, 
 @accordionTitleTextShadowColor: #000000,
@@ -15,9 +20,8 @@
 @accordionTitleBgColorActiveHoverOpacity: 1,
 @accordionTitleBorderWidth: 1,
 @accordionTitleBorderColor: #FFFFFF,
-@accordionTitleBorderRadius: 1,
-@accordionTitleIconColor: #000000,
-@accordionTitleIconColorHover: #FFFFFF){
+@accordionTitleBorderRadius: 1)
+{
 	.uk-accordion-title{
 		.enc-user-select-none;
 		.enc-transition(0.5s, ease);
@@ -43,12 +47,12 @@
 		span{
 			.enc-transition(0.5s, ease);
 			color: @accordionTitleIconColor;
-			font-family: 'FontAwesome';
+			font-family: accordionTitleIconFontFamily;
 			&:hover{
 				color: @accordionTitleIconColorHover;
 			}
 			&:before{
-				content: "\f0fe";
+				content: @accordionTitleIcon;
 			}
 		}
 	}
@@ -62,9 +66,9 @@
 		}
 		span{
 			color: @accordionTitleIconColorHover;
-			font-family: 'FontAwesome';
+			font-family: accordionTitleIconFontFamily;
 			&:before{
-				content: "\f146";
+				content: @accordionTitleIconActive;
 			}
 		}
 	}
